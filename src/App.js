@@ -9,6 +9,7 @@ const InputList = [
       required: "First name can not be empty",
     },
     placeholder: "First Name",
+    type: "text"
   },
   {
     name: "lastname",
@@ -16,6 +17,7 @@ const InputList = [
       required: "Last name can not be empty",
     },
     placeholder: "Last Name",
+    type: "text"
   },
   {
     name: "email",
@@ -27,6 +29,7 @@ const InputList = [
       },
     },
     placeholder: "Email",
+    type: "email"
   },
   {
     name: "password",
@@ -34,6 +37,7 @@ const InputList = [
       required: "Password can not be empty",
     },
     placeholder: "Password",
+    type: "password"
   },
 ];
 
@@ -74,6 +78,7 @@ const App = () => {
                     <input
                       {...register(item.name, { ...item.rule })}
                       placeholder={item.placeholder}
+                      type={item.type}
                     />
                     {errors[item.name] && (
                       <>
