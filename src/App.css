@@ -1,38 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+    --white: hsl(0, 0%, 100%);
+    --green-hover: hsl(154, 64%, 78%);
+    --box-shadow: hsl(249, 10%, 26%, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
 .App {
-  text-align: center;
+    min-height: 100vh;
+    background-image: url("assets/images/bg-intro-mobile.png");
+    background-size: 100%;
+    background-color: var(--red);
+    display: flex;
+    justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+    width: 350px;
+    padding: 5rem 0 3rem 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.free-box {
+    background-color: var(--blue);
+    padding: 1rem 5rem;
+    border-radius: 10px;
+    margin-bottom: 1.3rem;
+    box-shadow: 0 8px var(--box-shadow);
+    ;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.free-box p {
+    color: var(--white);
+    text-align: center;
+}
+
+.free-day {
+    font-weight: 600;
+}
+
+.form-box {
+    background-color: var(--white);
+    padding: 1.5rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px var(--box-shadow);
+}
+
+.free-trial-form input {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem 1rem;
+    font-weight: 600;
+    border: 1px solid var(--grayish-blue);
+    border-radius: 5px;
+    color: var(--dark-blue);
+}
+
+.claim-btn {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--green);
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 1rem;
+    box-shadow: 0 5px hsl(154, 58%, 42%);
+    cursor: pointer;
+}
+
+.claim-btn:hover {
+    background-color: var(--green-hover);
+}
+
+.term {
+    font-size: 12px;
+    text-align: center;
+    color: var(--grayish-blue);
+}
+
+.term a {
+    font-size: 12px;
+    color: var(--red);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 992px) {
+    .App {
+        background-image: url("assets/images/bg-intro-desktop.png");
+        background-color: var(--red);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    main {
+        width: 1250px;
+        display: grid;
+        grid-template-columns: 670px 580px;
+    }
+
+    .content {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .content p {
+        width: 550px;
+    }
+
+    .right-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .free-box {
+        padding: 1.5rem 5rem;
+    }
+
+    .form-box {
+        padding: 2.5rem 2.5rem;
+    }
+
+    .free-trial-form input {
+        padding: 1rem 2rem;
+        font-weight: 600;
+    }
 }
